@@ -1,12 +1,14 @@
-import { useState } from 'react'
-
-import React from 'react'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductItem from "./ProductItem";
+import HomePage from "./HomePage";
 
 export default function App() {
   return (
-    <div>
-      Hello App!
-      <HomePage />
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="product" element={<ProductItem />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
