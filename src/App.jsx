@@ -1,11 +1,12 @@
 import { useState } from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
+import React from 'react'
 
+export default function App() {
   return (
-<div>Hello App!</div>
+    <div>
+      Hello App!
+      <HomePage />
+    </div>
   )
 }
-
-export default App
